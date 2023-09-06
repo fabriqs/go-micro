@@ -1,10 +1,11 @@
 package h
 
-func Contains(arr []string, str string) bool {
+func Contains[T comparable](arr []T, elem T) bool {
 	for _, v := range arr {
-		if v == str {
+		if v == elem {
 			return true
 		}
 	}
+
 	return false
 }
